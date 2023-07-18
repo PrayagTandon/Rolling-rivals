@@ -15,10 +15,15 @@ body {
 }
 
 .heading--primary {
-  font-size: 6.4rem;
+  font-size: 7.2rem;
   text-transform: uppercase;
-  font-weight: 600;
-  color: #fefee3;
+  font-weight: 700;
+  display: inline-block;
+  background-color: transparent;
+  background-image: linear-gradient(to right, #dc2f02, #76c893);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .aside {
@@ -52,12 +57,13 @@ body {
 .main-container {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right bottom, rgba(220, 146, 87, 0.5), rgba(63, 167, 154, 0.5)), url(../../Img/dice-bg.jpg);
+  background-image: linear-gradient(to right bottom, rgba(149, 194, 230, 0.2), rgba(183, 224, 255, 0.2)), url(../../Img/dice-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   color: #ffffff;
   padding: 1rem;
+  padding-top: 2rem;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 8rem repeat(4, 1fr) 8rem;

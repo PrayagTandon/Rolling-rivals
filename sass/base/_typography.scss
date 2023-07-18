@@ -3,9 +3,16 @@
 .heading {
 
     &--primary {
-        font-size: 6.4rem;
+        font-size: 7.2rem;
         text-transform: uppercase;
-        font-weight: 600;
-        color: #fefee3;
+        font-weight: 700;
+        // color: #4aa48b;
+
+        display: inline-block;
+        background-color: transparent;
+        background-image: linear-gradient(to right, rgba($color-dark-heading , 1), rgba($color-light-heading , 1));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
     }
 }
