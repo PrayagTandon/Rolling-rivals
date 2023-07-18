@@ -2,9 +2,10 @@
 @use "../base/" as *;
 
 .aside {
-    background-color: chartreuse;
-    opacity: .5;
+    background-color: #6a8770;
+    opacity: 1;
     grid-row: 1 / -1;
+    border-radius: 1.4rem;
 
     &--left {
         grid-column: 1 / 2;

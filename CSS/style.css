@@ -15,7 +15,7 @@ body {
 }
 
 .heading--primary {
-  font-size: 7.2rem;
+  font-size: 6.4rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -27,9 +27,10 @@ body {
 }
 
 .aside {
-  background-color: chartreuse;
-  opacity: 0.5;
+  background-color: #6a8770;
+  opacity: 1;
   grid-row: 1/-1;
+  border-radius: 1.4rem;
 }
 .aside--left {
   grid-column: 1/2;
