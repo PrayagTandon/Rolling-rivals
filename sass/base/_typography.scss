@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.heading {
+
+    &--primary {
+        font-size: 6.4rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #fefee3;
+    }
+}

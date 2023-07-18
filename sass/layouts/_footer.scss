@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.footer {
+    grid-column: 2 / span 4;
+    grid-row: 6 / -1;
+    background-color: rgb(139, 0, 0);
+    opacity: .5;
+}

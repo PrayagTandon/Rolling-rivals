@@ -1,0 +1,16 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.aside {
+    background-color: chartreuse;
+    opacity: .5;
+    grid-row: 1 / -1;
+
+    &--left {
+        grid-column: 1 / 2;
+    }
+
+    &--right {
+        grid-column: 6 / -1;
+    }
+}
