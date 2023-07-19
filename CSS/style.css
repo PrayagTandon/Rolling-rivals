@@ -22,11 +22,14 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #52b69a;
 }
 .heading--primary {
   font-size: 6.4rem;
   font-weight: 700;
   background-image: linear-gradient(to right, #dc2f02, #76c893);
+  border-bottom: 3px solid #52b69a;
 }
 .heading--secondary {
   font-size: 3.2rem;
@@ -38,23 +41,6 @@ body {
   letter-spacing: 1px;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #52b69a;
-}
-
-.aside {
-  background-color: #364539;
-  opacity: 1;
-  border-radius: 1.4rem;
-  padding: 1.2rem;
-  align-self: center;
-}
-.aside--left {
-  grid-column: 1/2;
-  grid-row: 2/span 4;
-}
-.aside--right {
-  grid-column: 6/-1;
-  grid-row: 2/span 4;
-  padding-bottom: 1.8rem;
 }
 
 .game-description {
@@ -85,6 +71,51 @@ body {
   font-family: "Noto Serif", serif;
 }
 
+.player-container {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.player {
+  background-color: rgba(101, 102, 82, 0.9);
+  width: 50%;
+  height: 100%;
+  border-radius: 2rem;
+  box-shadow: 0px 1rem 1rem 0.2rem rgba(0, 0, 0, 0.4);
+}
+.player--0 {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.player--1 {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.player--active {
+  background-color: rgba(201, 203, 163, 0.8);
+}
+
+.aside {
+  background-color: #364539;
+  opacity: 1;
+  border-radius: 1.4rem;
+  padding: 1.2rem;
+  align-self: center;
+  padding-bottom: 1.8rem;
+}
+.aside--left {
+  grid-column: 1/2;
+  grid-row: 2/span 4;
+}
+.aside--right {
+  grid-column: 6/-1;
+  grid-row: 2/span 4;
+}
+
 .footer {
   grid-column: 2/span 4;
   grid-row: 6/-1;
@@ -104,7 +135,7 @@ body {
 .main-container {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right bottom, rgba(149, 194, 230, 0.2), rgba(183, 224, 255, 0.2)), url(../../Img/dice-bg.jpg);
+  background-image: linear-gradient(to right bottom, rgba(149, 194, 230, 0.5), rgba(183, 224, 255, 0.5)), url(../../Img/dice-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -121,8 +152,8 @@ body {
 .main-game {
   grid-column: 2/span 4;
   grid-row: 2/span 4;
-  background-color: steelblue;
-  opacity: 0.5;
+  opacity: 1;
+  padding-top: 2.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

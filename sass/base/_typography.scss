@@ -7,12 +7,14 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid rgba($color-secondary-dark , 1);
 
     &--primary {
         font-size: 6.4rem;
         font-weight: 700;
         background-image: linear-gradient(to right, rgba($color-dark-heading , 1), rgba($color-light-heading , 1));
-
+        border-bottom: 3px solid rgba($color-secondary-dark , 1);
     }
 
     &--secondary {
