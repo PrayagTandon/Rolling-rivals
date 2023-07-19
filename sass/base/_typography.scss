@@ -18,10 +18,12 @@
     &--secondary {
         font-size: 3.2rem;
         font-weight: 600;
-        background-image: linear-gradient(to right, #72efdd, #52b69a);
+        background-image: linear-gradient(to right, rgba($color-secondary-light , 1), rgba($color-secondary-dark , 1));
         margin-bottom: $margin-bottom-sm;
         padding-top: 2rem;
         line-height: 1.2;
         letter-spacing: 1px;
+        padding-bottom: .5rem;
+        border-bottom: 2px solid rgba($color-secondary-dark , 1);
     }
 }

@@ -5,17 +5,18 @@
     background-color: #364539;
     opacity: 1;
     border-radius: 1.4rem;
+    padding: 1.2rem;
+    align-self: center;
 
     &--left {
         grid-column: 1 / 2;
         grid-row: 2 / span 4;
-        padding: 1.2rem;
-        align-self: center;
     }
 
     &--right {
         grid-column: 6 / -1;
         grid-row: 2 / span 4;
+        padding-bottom: 1.8rem;
     }
 }
 
@@ -32,4 +33,23 @@
     font-size: 1.8rem;
     line-height: 1.6;
     font-family: $font-secondary;
+}
+
+.rules {
+
+    &-box {
+        list-style: none;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.6rem;
+    }
+
+    &-list {
+        font-size: 1.6rem;
+        line-height: 1.4;
+        font-family: $font-secondary;
+    }
 }
