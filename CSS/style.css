@@ -12,31 +12,60 @@ html {
 body {
   line-height: 1;
   height: 100vh;
+  font-family: "Oswald", sans-serif;
 }
 
-.heading--primary {
-  font-size: 6.4rem;
+.heading {
   text-transform: uppercase;
-  font-weight: 700;
   display: inline-block;
   background-color: transparent;
-  background-image: linear-gradient(to right, #dc2f02, #76c893);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
+.heading--primary {
+  font-size: 6.4rem;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #dc2f02, #76c893);
+}
+.heading--secondary {
+  font-size: 3.2rem;
+  font-weight: 600;
+  background-image: linear-gradient(to right, #72efdd, #52b69a);
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
 
 .aside {
-  background-color: #6a8770;
+  background-color: #364539;
   opacity: 1;
-  grid-row: 1/-1;
   border-radius: 1.4rem;
 }
 .aside--left {
   grid-column: 1/2;
+  grid-row: 2/span 4;
+  padding: 1.2rem;
+  align-self: center;
 }
 .aside--right {
   grid-column: 6/-1;
+  grid-row: 2/span 4;
+}
+
+.game-description {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.description-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-family: "Noto Serif", serif;
 }
 
 .footer {

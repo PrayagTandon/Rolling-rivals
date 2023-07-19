@@ -1,18 +1,27 @@
 @use "../abstracts/" as *;
 
 .heading {
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 
     &--primary {
         font-size: 6.4rem;
-        text-transform: uppercase;
         font-weight: 700;
-        // color: #4aa48b;
-
-        display: inline-block;
-        background-color: transparent;
         background-image: linear-gradient(to right, rgba($color-dark-heading , 1), rgba($color-light-heading , 1));
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
+
+    }
+
+    &--secondary {
+        font-size: 3.2rem;
+        font-weight: 600;
+        background-image: linear-gradient(to right, #72efdd, #52b69a);
+        margin-bottom: $margin-bottom-sm;
+        padding-top: 2rem;
+        line-height: 1.2;
+        letter-spacing: 1px;
     }
 }

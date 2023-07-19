@@ -2,16 +2,34 @@
 @use "../base/" as *;
 
 .aside {
-    background-color: #6a8770;
+    background-color: #364539;
     opacity: 1;
-    grid-row: 1 / -1;
     border-radius: 1.4rem;
 
     &--left {
         grid-column: 1 / 2;
+        grid-row: 2 / span 4;
+        padding: 1.2rem;
+        align-self: center;
     }
 
     &--right {
         grid-column: 6 / -1;
+        grid-row: 2 / span 4;
     }
+}
+
+.game-description {
+    // background-color: rgb(164, 53, 53);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.description-text {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    font-family: $font-secondary;
 }
