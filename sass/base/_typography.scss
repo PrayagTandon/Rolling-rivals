@@ -15,9 +15,19 @@
         font-weight: 700;
         background-image: linear-gradient(to right, rgba($color-dark-heading , 1), rgba($color-light-heading , 1));
         border-bottom: 3px solid rgba($color-secondary-dark , 1);
+        font-family: $font-secondary;
     }
 
     &--secondary {
+        font-size: 4.8rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        color: $color-dark-3;
+        margin-bottom: $margin-bottom-md;
+        border-bottom: none;
+    }
+
+    &--tertiary {
         font-size: 3.2rem;
         font-weight: 600;
         background-image: linear-gradient(to right, rgba($color-secondary-light , 1), rgba($color-secondary-dark , 1));

@@ -31,7 +31,7 @@
 
       <aside class="aside aside--left">
         <section class="game-description">
-          <h2 class="heading heading--secondary">Game Description</h2>
+          <h2 class="heading heading--tertiary">Game Description</h2>
           <p class="description-text">
             The game is designed for two players to compete against each other,
             and the objective is to reach 100 points or more to win the match.
@@ -41,7 +41,7 @@
 
       <aside class="aside aside--right">
         <section class="game-rules">
-          <h2 class="heading heading--secondary">Game Rules :</h2>
+          <h2 class="heading heading--tertiary">Game Rules :</h2>
           <ul class="rules-box">
             <li class="rules-list">
               1. Player 1 initiates the game and takes the first turn by rolling
@@ -70,8 +70,10 @@
         <div class="player-container">
           <section class="player player--0 player--active">
             <div class="player-box">
-              <h3 class="heading heading--tertiary">PLayer 1</h3>
-              <p class="score" id="score--0">45</p>
+              <div class="player-description">
+                <h3 class="heading heading--secondary">Player 1</h3>
+                <p class="score" id="score--0">45</p>
+              </div>
 
               <div class="score-box">
                 <p class="current--text">Current</p>
@@ -80,10 +82,23 @@
             </div>
           </section>
           <section class="player player--1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-            illo.
+            <div class="player-box">
+              <div class="player-description">
+                <h3 class="heading heading--secondary">Player 2</h3>
+                <p class="score" id="score--1">23</p>
+              </div>
+
+              <div class="score-box">
+                <p class="current--text">Current</p>
+                <p class="current--score" id="current--1">0</p>
+              </div>
+            </div>
           </section>
         </div>
+
+        <section class="dice-box">
+          <img src="Img/dice-5.png" alt="Playing dice" class="dice-img" />
+        </section>
       </main>
 
       <!-- FOOTER  

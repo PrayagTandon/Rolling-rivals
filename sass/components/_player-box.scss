@@ -1,0 +1,42 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.player {
+
+    &-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 11.2rem;
+    }
+
+    &-description {
+        margin-bottom: $margin-bottom-md;
+    }
+}
+
+.score {
+    font-size: 4.8rem;
+    color: $color-light-2;
+    letter-spacing: .8px;
+}
+
+.score-box {
+    padding: 1.6rem;
+    background-image: linear-gradient(to right bottom, rgba($color-light-2 , .9), rgba($color-light-3 , .7));
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.current {
+
+    &--text,
+    &--score {
+        font-size: 3.2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}
