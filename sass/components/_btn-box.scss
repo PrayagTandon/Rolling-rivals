@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.box {
+
+    &--new-game {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.btn {
+
+    cursor: pointer;
+
+    &--reset {
+        border: none;
+        padding: 1rem 1.8rem;
+        border-radius: 2rem;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        color: $color-dark-3;
+        font-weight: 500;
+        background-color: rgba($color-white , .4);
+        backdrop-filter: blur(10px);
+    }
+}

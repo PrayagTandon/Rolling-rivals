@@ -80,6 +80,13 @@ body {
   font-family: "Noto Serif", serif;
 }
 
+.box--new-game {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .dice-box {
   position: absolute;
   top: 45%;
@@ -89,6 +96,21 @@ body {
 .dice-img {
   width: 9.6rem;
   height: 9.6rem;
+}
+
+.btn {
+  cursor: pointer;
+}
+.btn--reset {
+  border: none;
+  padding: 1rem 1.8rem;
+  border-radius: 2rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #1d3557;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
 }
 
 .player-container {
