@@ -3,10 +3,23 @@
 
 .box {
 
-    &--new-game {
+    &--new-game,
+    &--dice-roll,
+    &--dice-hold {
         position: absolute;
-        top: 15%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    &--new-game {
+        top: 15%;
+    }
+
+    &--dice-roll {
+        top: 75%;
+    }
+
+    &--dice-hold {
+        top: 88%;
     }
 }

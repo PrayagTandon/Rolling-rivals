@@ -2,8 +2,36 @@
 @use "../base/" as *;
 
 .footer {
-    grid-column: 2 / span 4;
+    grid-column: 3 / span 2;
     grid-row: 6 / -1;
-    background-color: rgb(139, 0, 0);
-    opacity: .5;
+    opacity: 1;
+    padding: 1.6rem;
+    padding-top: 0rem;
+}
+
+.footer-nav {
+    background-color: $color-dark-3;
+}
+
+.footer {
+
+    &-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    &__link {
+
+        transition: all .3s ease;
+
+        img {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        &:hover {
+            transform: translateY(-.2rem);
+        }
+    }
 }

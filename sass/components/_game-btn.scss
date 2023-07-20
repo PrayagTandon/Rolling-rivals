@@ -2,10 +2,21 @@
 @use "../base/" as *;
 
 .btn {
-
     cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: $box-shadow-sm;
 
-    &--reset {
+    &:hover {
+        transform: translateY(-.4rem);
+    }
+
+    &:active {
+        transform: translateY(-.2rem);
+    }
+
+    &--reset,
+    &--roll,
+    &--hold {
         border: none;
         padding: 1rem 1.8rem;
         border-radius: 2rem;
