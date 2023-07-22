@@ -222,11 +222,15 @@ body ::selection {
   padding: 1.6rem;
   padding-top: 0rem;
 }
-
 .footer-nav {
   background-color: #1d3557;
+  padding: 1rem 1.6rem;
+  border-radius: 2rem;
 }
-
+.footer-description {
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
 .footer-links {
   display: grid;
   grid-template-columns: 1fr 1fr;

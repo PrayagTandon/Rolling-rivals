@@ -7,13 +7,17 @@
     opacity: 1;
     padding: 1.6rem;
     padding-top: 0rem;
-}
 
-.footer-nav {
-    background-color: $color-dark-3;
-}
+    &-nav {
+        background-color: $color-dark-3;
+        padding: 1rem 1.6rem;
+        border-radius: 2rem;
+    }
 
-.footer {
+    &-description {
+        font-size: 1.8em;
+        text-transform: uppercase;
+    }
 
     &-links {
         display: grid;
