@@ -10,6 +10,11 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+@media (max-width: 100em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   line-height: 1;
@@ -155,6 +160,11 @@ body ::selection {
   justify-content: center;
   padding: 9rem;
 }
+@media (max-width: 75em) {
+  .player {
+    padding: 3.5rem;
+  }
+}
 .player--0 {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -210,9 +220,26 @@ body ::selection {
   grid-column: 1/2;
   grid-row: 2/span 4;
 }
+@media (max-width: 75em) {
+  .aside--left {
+    grid-row: 1/span 2;
+    grid-column: 1/span 2;
+  }
+}
 .aside--right {
   grid-column: 6/-1;
   grid-row: 2/span 4;
+}
+@media (max-width: 75em) {
+  .aside--right {
+    grid-row: 3/6;
+    grid-column: 1/span 2;
+  }
+}
+@media (max-width: 60em) {
+  .aside--right {
+    grid-row: 3/-1;
+  }
 }
 
 .footer {
@@ -221,6 +248,16 @@ body ::selection {
   opacity: 1;
   padding: 1.6rem;
   padding-top: 0rem;
+}
+@media (max-width: 75em) {
+  .footer {
+    grid-column: 1/span 2;
+  }
+}
+@media (max-width: 60em) {
+  .footer {
+    grid-column: 5/span 2;
+  }
 }
 .footer-nav {
   background-color: #1d3557;
@@ -255,6 +292,12 @@ body ::selection {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 75em) {
+  .header {
+    grid-column: 3/-1;
+    justify-self: center;
+  }
+}
 
 .main-container {
   width: 100%;
@@ -269,8 +312,6 @@ body ::selection {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 8rem repeat(4, 1fr) 8rem;
-  column-gap: 1rem;
-  row-gap: 1rem;
 }
 
 .main-game {
@@ -280,6 +321,11 @@ body ::selection {
   padding-top: 2.4rem;
   height: 95%;
   position: relative;
+}
+@media (max-width: 75em) {
+  .main-game {
+    grid-column: 3/-1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

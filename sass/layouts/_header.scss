@@ -5,8 +5,12 @@
     grid-column: 2 / span 4;
     opacity: .5;
     padding: 1.2rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include respond-to('xl') {
+        grid-column: 3 / -1;
+        justify-self: center;
+    }
 }

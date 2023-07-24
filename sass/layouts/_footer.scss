@@ -8,6 +8,14 @@
     padding: 1.6rem;
     padding-top: 0rem;
 
+    @include respond-to('xl') {
+        grid-column: 1 / span 2;
+    }
+
+    @include respond-to('lg') {
+        grid-column: 5 / span 2;
+    }
+
     &-nav {
         background-color: $color-dark-3;
         padding: 1rem 1.6rem;

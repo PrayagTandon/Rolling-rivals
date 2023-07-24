@@ -9,7 +9,7 @@ $breakpoints: (
     // ~ 960px
     'xl': (max-width: 75em, ),
     // ~ 1200px
-    '2xl': (min-width: 100em, ),
+    '2xl': (max-width: 100em, ),
     // 1600px ~
 );
 
