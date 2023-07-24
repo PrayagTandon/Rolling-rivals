@@ -12,4 +12,15 @@
     @include respond-to('xl') {
         grid-column: 3 / -1;
     }
+
+    @include respond-to('lg') {
+        grid-column: 1 / -1;
+        grid-row: 3 / span 3;
+    }
+
+    @include respond-to('md-2') {
+        height: 100%;
+        grid-column: 1 / span 4;
+        grid-row: 3 / span 2;
+    }
 }

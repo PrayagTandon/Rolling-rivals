@@ -9,17 +9,52 @@
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @include respond-to ('md-2') {
+            left: 125%;
+        }
     }
 
     &--new-game {
         top: 15%;
+
+        @include respond-to('md-2') {
+            top: 25%;
+        }
     }
 
     &--dice-roll {
         top: 75%;
+
+        @include respond-to('md-2') {
+            top: 55%;
+        }
     }
 
     &--dice-hold {
         top: 88%;
+
+        @include respond-to ('lg') {
+            top: 84%;
+        }
+
+        @include respond-to('md-2') {
+            top: 70%;
+        }
+    }
+}
+
+.btn {
+    @include respond-to('md-2') {
+        width: 22rem;
+        height: 5rem;
+    }
+
+    &-text {
+
+        @include respond-to ('md-2') {
+            font-size: 2.4rem;
+            font-family: $font-secondary;
+        }
     }
 }

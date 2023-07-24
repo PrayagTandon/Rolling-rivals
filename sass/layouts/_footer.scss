@@ -13,7 +13,11 @@
     }
 
     @include respond-to('lg') {
-        grid-column: 5 / span 2;
+        grid-column: 3 / span 2;
+    }
+
+    @include respond-to('md-2') {
+        grid-column: 2 / span 3;
     }
 
     &-nav {
@@ -25,6 +29,14 @@
     &-description {
         font-size: 1.8em;
         text-transform: uppercase;
+
+        @include respond-to('xl') {
+            margin-bottom: 1rem;
+        }
+
+        @include respond-to('lg') {
+            margin-bottom: 2rem;
+        }
     }
 
     &-links {
@@ -34,16 +46,27 @@
     }
 
     &__link {
-
+        cursor: default;
         transition: all .3s ease;
 
         img {
             width: 4rem;
             height: 4rem;
-        }
 
-        &:hover {
-            transform: translateY(-.2rem);
+            @include respond-to('lg') {
+                width: 3rem;
+                height: 3rem;
+            }
+
+            @include respond-to('md-2') {
+                width: 4rem;
+                height: 4rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-.2rem);
+            }
         }
     }
 }

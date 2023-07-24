@@ -9,6 +9,17 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    @include respond-to('xl') {
+        width: 90%;
+    }
+
+    @include respond-to('md-2') {
+        width: 95%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
 }
 
 .player {
@@ -27,14 +38,30 @@
         padding: 3.5rem;
     }
 
+    @include respond-to('md-2') {
+        padding: 5rem;
+        justify-content: stretch;
+    }
+
     &--0 {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
+
+        @include respond-to('md-2') {
+            border-top-right-radius: 2rem;
+            border-bottom-left-radius: 0;
+        }
     }
 
     &--1 {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+
+        @include respond-to('md-2') {
+            border-bottom-left-radius: 2rem;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 2rem;
+        }
     }
 
     &--active {

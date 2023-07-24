@@ -25,6 +25,10 @@
         color: $color-dark-3;
         margin-bottom: $margin-bottom-md;
         border-bottom: none;
+
+        @include respond-to ('md-2') {
+            font-size: 3.6rem;
+        }
     }
 
     &--tertiary {
@@ -37,5 +41,9 @@
         letter-spacing: 1px;
         padding-bottom: .5rem;
         border-bottom: 2px solid rgba($color-secondary-dark , 1);
+
+        @include respond-to('lg') {
+            padding-top: 0rem;
+        }
     }
 }

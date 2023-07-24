@@ -8,6 +8,12 @@
         flex-direction: column;
         justify-content: center;
         gap: 11.2rem;
+
+        @include respond-to ('md-2') {
+            gap: 6rem;
+            flex-direction: row;
+            align-items: flex-start;
+        }
     }
 
     &-description {

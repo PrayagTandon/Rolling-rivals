@@ -15,4 +15,12 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 8rem repeat(4, 1fr) 8rem;
+
+    @include respond-to('lg') {
+        grid-template-rows: 10rem repeat(4, 1fr) 10rem;
+    }
+
+    @include respond-to('md-2') {
+        grid-template-rows: 10rem repeat(3, 1fr) 8rem;
+    }
 }
