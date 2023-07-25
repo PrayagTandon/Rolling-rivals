@@ -25,6 +25,7 @@ const scores = [0, 0];
 currentScore = 0;
 activePlayer = 0;
 
+// BTN ROLL DICE....
 btnRollEl.addEventListener('click', function () {
 
     // 1. GENERATE A RANDOM DICE ROLL
@@ -43,8 +44,17 @@ btnRollEl.addEventListener('click', function () {
         // current0El.textContent = currentScore;
     } else {
         // SWITCH PLAYER
+        document.getElementById(`current--${activePlayer}`).textContent = 0;
         activePlayer = activePlayer === 0 ? 1 : 0;
-
+        currentScore = 0;
+        player0El.classList.toggle('player--active');
+        player1El.classList.toggle('player--active');
     }
 })
 
+// BTN HOLD SCORE...
+btnHoldEl.addEventListener('click', function () {
+    // 1. ADD CURRENT SCORE TO TOTAL SCORE
+
+    // 2. SCORE >= 100
+})
