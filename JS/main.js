@@ -13,3 +13,10 @@ const diceEl = document.querySelector('.dice-img');
 const btnNewEl = document.querySelector('.btn--reset');
 const btnRollEl = document.querySelector('.btn--roll');
 const btnHoldEl = document.querySelector('.btn--hold');
+
+// let score , currentScore , playing , activePlayer;
+
+btnRollEl.addEventListener('click', function () {
+
+})
+
