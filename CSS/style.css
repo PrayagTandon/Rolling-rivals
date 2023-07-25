@@ -73,6 +73,10 @@ body ::selection {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 .game-description {
   height: 100%;
   display: flex;
