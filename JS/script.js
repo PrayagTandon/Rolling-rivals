@@ -16,7 +16,17 @@ const btnHoldEl = document.querySelector('.btn--hold');
 
 // let score , currentScore , playing , activePlayer;
 
-btnRollEl.addEventListener('click', function () {
+// STARTING CONDITION
+score0El.textContent = 0;
+score1El.textContent = 0;
+diceEl.classList.add('hidden');
 
+btnRollEl.addEventListener('click', function () {
+    // 1. GENERATE A RANDOM DICE ROLL
+
+
+    // 2. DISPLAY THE DICE ROLL
+
+    // 3. CHECK FOR 1 : IF YES - SWITCH PLAYER
 })
 
