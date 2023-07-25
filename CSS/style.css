@@ -128,7 +128,7 @@ body ::selection {
   }
 }
 .box--dice-hold {
-  top: 88%;
+  top: 85%;
 }
 @media (max-width: 60em) {
   .box--dice-hold {
