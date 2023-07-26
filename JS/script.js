@@ -24,37 +24,59 @@ diceEl.classList.add('hidden');
 const scores = [0, 0];
 currentScore = 0;
 activePlayer = 0;
+playing = true;
+
+// FUNCTIONS
+
+const switchPlayer = function () {
+    document.getElementById(`current--${activePlayer}`).textContent = 0;
+    activePlayer = activePlayer === 0 ? 1 : 0;
+    currentScore = 0;
+    player0El.classList.toggle('player--active');
+    player1El.classList.toggle('player--active');
+};
 
 // BTN ROLL DICE....
 btnRollEl.addEventListener('click', function () {
 
-    // 1. GENERATE A RANDOM DICE ROLL
-    const dice = Math.trunc(Math.random() * 6) + 1
-    console.log(dice);
+    if (playing) {
+        // 1. GENERATE A RANDOM DICE ROLL
+        const dice = Math.trunc(Math.random() * 6) + 1
+        console.log(dice);
 
-    // 2. DISPLAY THE DICE ROLL
-    diceEl.classList.remove('hidden');
-    diceEl.src = `Img/dice-${dice}.png`;
+        // 2. DISPLAY THE DICE ROLL
+        diceEl.classList.remove('hidden');
+        diceEl.src = `Img/dice-${dice}.png`;
 
-    // 3. CHECK FOR 1 : IF YES - SWITCH PLAYER
-    if (dice !== 1) {
-        // ADD DICE TO CURRENT SCORE
-        currentScore += dice;
-        document.getElementById(`current--${activePlayer}`).textContent = currentScore;
-        // current0El.textContent = currentScore;
-    } else {
-        // SWITCH PLAYER
-        document.getElementById(`current--${activePlayer}`).textContent = 0;
-        activePlayer = activePlayer === 0 ? 1 : 0;
-        currentScore = 0;
-        player0El.classList.toggle('player--active');
-        player1El.classList.toggle('player--active');
+        // 3. CHECK FOR 1 : IF YES - SWITCH PLAYER
+        if (dice !== 1) {
+            // ADD DICE TO CURRENT SCORE
+            currentScore += dice;
+            document.getElementById(`current--${activePlayer}`).textContent = currentScore;
+            // current0El.textContent = currentScore;
+        } else {
+            // SWITCH PLAYER
+            switchPlayer();
+        }
     }
 })
 
 // BTN HOLD SCORE...
 btnHoldEl.addEventListener('click', function () {
-    // 1. ADD CURRENT SCORE TO TOTAL SCORE
 
-    // 2. SCORE >= 100
+    if (playing) {
+        // 1. ADD CURRENT SCORE TO TOTAL SCORE
+        scores[activePlayer] += currentScore;
+        document.querySelector(`#score--${activePlayer}`).textContent = scores[activePlayer];
+
+        // 2. IF SCORE >= 100
+        if (scores[activePlayer] >= 100) {
+            // FINISH THE GAME
+            playing = false;
+        }
+        else {
+            // SWITCH PLAYER
+            switchPlayer();
+        }
+    }
 })
