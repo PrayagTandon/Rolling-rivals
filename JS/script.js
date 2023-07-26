@@ -80,3 +80,10 @@ btnHoldEl.addEventListener('click', function () {
         }
     }
 })
+
+// BTN RESET GAME...
+btnNewEl.addEventListener('click', function () {
+    // 1. All SCORE TO ZERO
+
+    // 2. SETTING PLAYER 1 AS ACTIVE PLAYER
+})
