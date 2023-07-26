@@ -3,3 +3,12 @@
 .hidden {
     display: none;
 }
+
+.player--winner {
+    background-color: $color-light-heading;
+}
+
+.btn--disabled {
+    background-color: rgba(255, 255, 255, .2);
+    cursor: not-allowed;
+}

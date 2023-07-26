@@ -14,19 +14,25 @@ const btnNewEl = document.querySelector('.btn--reset');
 const btnRollEl = document.querySelector('.btn--roll');
 const btnHoldEl = document.querySelector('.btn--hold');
 
-let score, currentScore, playing, activePlayer;
+let scores, currentScore, playing, activePlayer;
 
-// STARTING CONDITION
-score0El.textContent = 0;
-score1El.textContent = 0;
-diceEl.classList.add('hidden');
+// STARTING CONDITIONS
 
-const scores = [0, 0];
-currentScore = 0;
-activePlayer = 0;
-playing = true;
+const init = function () {
+    scores = [0, 0];
+    currentScore = 0;
+    activePlayer = 0;
+    playing = true;
 
-// FUNCTIONS
+    score0El.textContent = 0;
+    score1El.textContent = 0;
+    current0El.textContent = 0;
+    current1El.textContent = 0;
+
+    diceEl.classList.add('hidden');
+}
+
+init();
 
 const switchPlayer = function () {
     document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -42,7 +48,6 @@ btnRollEl.addEventListener('click', function () {
     if (playing) {
         // 1. GENERATE A RANDOM DICE ROLL
         const dice = Math.trunc(Math.random() * 6) + 1
-        console.log(dice);
 
         // 2. DISPLAY THE DICE ROLL
         diceEl.classList.remove('hidden');
@@ -70,9 +75,14 @@ btnHoldEl.addEventListener('click', function () {
         document.querySelector(`#score--${activePlayer}`).textContent = scores[activePlayer];
 
         // 2. IF SCORE >= 100
-        if (scores[activePlayer] >= 100) {
+        if (scores[activePlayer] >= 20) {
             // FINISH THE GAME
             playing = false;
+            diceEl.classList.add('hidden');
+            document.querySelector(`player--${activePlayer}`).classList.add('player--winner');
+            document.querySelector(`player--${activePlayer}`).classList.remove('player--active');
+            btnRollEl.classList.add('btn--disabled');
+            btnHoldEl.classList.add('btn--disabled');
         }
         else {
             // SWITCH PLAYER
@@ -82,8 +92,4 @@ btnHoldEl.addEventListener('click', function () {
 })
 
 // BTN RESET GAME...
-btnNewEl.addEventListener('click', function () {
-    // 1. All SCORE TO ZERO
-
-    // 2. SETTING PLAYER 1 AS ACTIVE PLAYER
-})
+btnNewEl.addEventListener('click', init());
