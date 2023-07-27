@@ -40,6 +40,9 @@ const init = function () {
 
 init();
 
+document.querySelector('.player--0-heading').textContent = prompt('Enter player1 name:(Max 10 characters)');
+document.querySelector('.player--1-heading').textContent = prompt('Enter player2 name:(Max 10 characters)');
+
 const switchPlayer = function () {
     document.getElementById(`current--${activePlayer}`).textContent = 0;
     activePlayer = activePlayer === 0 ? 1 : 0;
@@ -99,8 +102,6 @@ btnHoldEl.addEventListener('click', function () {
 
 // BTN RESET GAME...
 btnNewEl.addEventListener('click', function () {
-    document.querySelector('.player--0-heading').textContent = prompt('Enter player1 name:(Max 10 characters)');
-    document.querySelector('.player--1-heading').textContent = prompt('Enter player2 name:(Max 10 characters)');
     init();
     playing = true;
     btnHoldEl.classList.remove('btn--disabled');
