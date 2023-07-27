@@ -22,7 +22,7 @@ const init = function () {
     scores = [0, 0];
     currentScore = 0;
     activePlayer = 0;
-    playing = true;
+    playing = false;
 
     score0El.textContent = 0;
     score1El.textContent = 0;
@@ -30,6 +30,12 @@ const init = function () {
     current1El.textContent = 0;
 
     diceEl.classList.add('hidden');
+    player0El.classList.remove('player--winner');
+    player1El.classList.remove('player--winner');
+    player0El.classList.add('player--active');
+    player1El.classList.remove('player--active');
+    btnHoldEl.classList.add('btn--disabled');
+    btnRollEl.classList.add('btn--disabled');
 }
 
 init();
@@ -75,14 +81,14 @@ btnHoldEl.addEventListener('click', function () {
         document.querySelector(`#score--${activePlayer}`).textContent = scores[activePlayer];
 
         // 2. IF SCORE >= 100
-        if (scores[activePlayer] >= 20) {
+        if (scores[activePlayer] >= 100) {
             // FINISH THE GAME
             playing = false;
             diceEl.classList.add('hidden');
-            document.querySelector(`player--${activePlayer}`).classList.add('player--winner');
-            document.querySelector(`player--${activePlayer}`).classList.remove('player--active');
-            btnRollEl.classList.add('btn--disabled');
+            document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
+            document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
             btnHoldEl.classList.add('btn--disabled');
+            btnRollEl.classList.add('btn--disabled');
         }
         else {
             // SWITCH PLAYER
@@ -92,4 +98,11 @@ btnHoldEl.addEventListener('click', function () {
 })
 
 // BTN RESET GAME...
-btnNewEl.addEventListener('click', init());
+btnNewEl.addEventListener('click', function () {
+    document.querySelector('.player--0-heading').textContent = prompt('Enter player1 name:(Max 10 characters)');
+    document.querySelector('.player--1-heading').textContent = prompt('Enter player2 name:(Max 10 characters)');
+    init();
+    playing = true;
+    btnHoldEl.classList.remove('btn--disabled');
+    btnRollEl.classList.remove('btn--disabled');
+});
