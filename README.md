@@ -3,7 +3,7 @@
 ## Description:
 
 ```
-Created a beautiful dice roll game where 2 players compete against eah other and the first player to reach 100 or more points wins the game.
+Created a beautiful dice roll game where 2 players compete against each other and the first player to reach 100 or more points wins the game.
 ```
 
 ## Project Overwiew:
