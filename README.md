@@ -1,4 +1,4 @@
-# Guess-my-number-Project [Live-site](https://rolling-rivals.netlify.app/)
+# Rolling-Rivals [Live-site](https://rolling-rivals.netlify.app/)
 
 ## Description:
 
