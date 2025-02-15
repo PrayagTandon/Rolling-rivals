@@ -1,4 +1,4 @@
-# Rolling-Rivals [Live-site](https://rolling-rivals.netlify.app/)
+# Rolling-Rivals Project [Live-site](https://rolling-rivals.netlify.app/)
 
 ## Description:
 
@@ -23,4 +23,3 @@ Created a beautiful dice roll game where 2 players compete against each other an
 Tints and Shades: Source: [Tints and Shades generator](https://maketintsandshades.com/)
 
 3. Images: Source: [Unsplash](https://unsplash.com/) , [Pexels](https://www.pexels.com/)
-
